@@ -32,6 +32,7 @@ hwLcd_setBootProperty(int density)
         else
             density = LCD_DENSITY_XHDPI;
     }
+    density = LCD_DENSITY_TVDPI;
 
     snprintf(temp, sizeof temp, "%d", density);
     boot_property_add("qemu.sf.lcd_density", temp);
